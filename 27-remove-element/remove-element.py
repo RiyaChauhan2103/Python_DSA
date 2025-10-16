@@ -1,9 +1,13 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        index=0
-        for i in range(len(nums)):
-            if nums[i]!=val:
-                nums[index]=nums[i]
-                index+=1
+        # Loop backwards
+        for i in range(len(nums) - 1, -1, -1):
+            if nums[i] == val:
+                nums.pop(i)   # remove the element if it's equal to val
+
+        # print for debugging (optional)
         print(nums)
-        return index    
+
+        # return the count of remaining elements
+        return len(nums)
+
