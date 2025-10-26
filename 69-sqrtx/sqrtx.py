@@ -13,5 +13,4 @@ class Solution:
                 # print(max_value)
                 max_val=i
                 break;
-        # print(min_val,max_val)
         return (min_val+max_val)//2    
