@@ -6,7 +6,8 @@
 #         self.right = right
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-        # print(root)
+
+        print(root)
         res=[]
         q=[]
         q.append(root)
@@ -18,13 +19,12 @@ class Solution:
             for _ in range(len(q)):
                 curr_node=q.pop(0)
                 if curr_node is None:
-                    # just record the None
+
                     res[curr_level].append(None)
                     continue
                 res[curr_level].append(curr_node.val)
-                # if curr_node.left is not None:
+                
                 q.append(curr_node.left)
-            # if curr_node.right is not None:
                 q.append(curr_node.right)
             
             mid=len(res[curr_level])//2
